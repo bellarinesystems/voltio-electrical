@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltio Electrical — Warranwood Sparky | Downlights, Pendants & Switch Upgrades</title>
+<meta name="description" content="Voltio Electrical — Warranwood electrician specialising in downlights, pendants, switch upgrades and exhaust fans. One sparky, whole job, clean finish.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root {
+    --primary: #1A1A2E;
+    --primary-deep: #11111f;
+    --secondary: #F5A623;
+    --accent: #2EC4B6;
+    --neutral: #F2F2F0;
+    --ink: #1A1A2E;
+    --paper: #FFFFFF;
+    --line: rgba(26,26,46,0.12);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Manrope', system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--neutral);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img, svg, iframe { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  h1, h2, h3, h4 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.6em;
+  }
+  p { margin: 0 0 1em; }
+
+  .wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  /* ============ NAV ============ */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--primary);
+    color: var(--neutral);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav-inner {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: var(--neutral);
+    letter-spacing: -0.01em;
+  }
+  .brand-mark {
+    width: 32px; height: 32px;
+    display: grid; place-items: center;
+    background: var(--secondary);
+    color: var(--primary);
+    transform: skewX(-18deg);
+    border-radius: 4px;
+  }
+  .brand-mark i { transform: skewX(18deg); font-size: 0.9rem; }
+  .brand span em { color: var(--secondary); font-style: normal; }
+
+  .nav-links { display: none; }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--neutral);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+  }
+  .nav-links a:hover, .nav-links a:focus-visible {
+    color: var(--secondary);
+    outline: 2px solid transparent;
+  }
+  .nav-cta {
+    display: none;
+    background: var(--secondary);
+    color: var(--primary) !important;
+    padding: 0.6rem 1rem !important;
+    font-weight: 700 !important;
+    border-radius: 4px;
+  }
+
+  .hamburger {
+    width: 48px; height: 48px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    padding: 0;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px; height: 2px;
+    background: var(--neutral);
+    position: relative;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+  .hamburger span::before, .hamburger span::after {
+    content: ''; position: absolute; left: 0;
+    width: 22px; height: 2px; background: var(--neutral);
+    transition: transform 0.25s ease;
+  }
+  .hamburger span::before { top: -7px; }
+  .hamburger span::after  { top: 7px; }
+  .hamburger[aria-expanded="true"] span { background: transparent; }
+  .hamburger[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+  .hamburger[aria-expanded="true"] span::after  { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu {
+    position: fixed;
+    inset: 60px 0 0 0;
+    background: var(--primary-deep);
+    padding: 1.5rem 1.25rem 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 99;
+    overflow-y: auto;
+  }
+  .mobile-menu.open { transform: translateX(0); }
+  .mobile-menu a {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    padding: 0.5rem 0.75rem;
+    color: var(--neutral);
+    text-decoration: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .mobile-menu a i {
+    color: var(--accent);
+    margin-right: 0.75rem;
+    width: 20px;
+    text-align: center;
+  }
+  .mobile-menu .menu-cta {
+    margin-top: 1.25rem;
+    background: var(--secondary);
+    color: var(--primary);
+    border: none;
+    border-bottom: none;
+    border-radius: 4px;
+    justify-content: center;
+  }
+
+  @media (min-width: 1024px) {
+    .nav-inner { height: 64px; }
+    .nav-links { display: flex; gap: 0.25rem; align-items: center; }
+    .nav-cta { display: inline-flex; align-items: center; gap: 0.4rem; }
+    .hamburger { display: none; }
+    .mobile-menu { display: none; }
+  }
+
+  /* ============ MOTIF / SHARED ============ */
+  .motif-line {
+    height: 14px;
+    width: 100%;
+    background-image:
+      linear-gradient(135deg, transparent 45%, var(--accent) 45%, var(--accent) 50%, transparent 50%),
+      linear-gradient(135deg, transparent 65%, var(--secondary) 65%, var(--secondary) 70%, transparent 70%);
+    background-size: 28px 14px, 44px 14px;
+    opacity: 0.7;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 28px; height: 2px;
+    background: var(--secondary);
+    transform: skewX(-30deg);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 52px;
+    padding: 0.9rem 1.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: -0.01em;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary {
+    background: var(--secondary);
+    color: var(--primary);
+    box-shadow: 4px 4px 0 var(--accent);
+  }
+  .btn-primary:hover, .btn-primary:focus-visible {
+    transform: translate(-2px,-2px);
+    box-shadow: 6px 6px 0 var(--accent);
+    outline: 2px solid var(--primary);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--neutral);
+    border: 2px solid var(--neutral);
+  }
+  .btn-ghost:hover, .btn-ghost:focus-visible {
+    background: var(--neutral);
+    color: var(--primary);
+    outline: none;
+  }
+  .btn-dark {
+    background: var(--primary);
+    color: var(--neutral);
+    box-shadow: 4px 4px 0 var(--secondary);
+  }
+  .btn-dark:hover, .btn-dark:focus-visible {
+    transform: translate(-2px,-2px);
+    box-shadow: 6px 6px 0 var(--secondary);
+    outline: 2px solid var(--primary);
+  }
+
+  section { padding: clamp(3rem, 8vw, 6rem) 0; }
+  .section-head { max-width: 720px; margin-bottom: clamp(2rem, 5vw, 3rem); }
+  .section-head h2 {
+    font-size: clamp(1.85rem, 5.2vw, 3rem);
+  }
+  .section-head .underline {
+    width: 80px; height: 6px;
+    background: var(--secondary);
+    transform: skewX(-30deg);
+    margin-top: 1rem;
+    position: relative;
+  }
+  .section-head .underline::after {
+    content: '';
+    position: absolute;
+    left: 32px; top: 0;
+    width: 40px; height: 6px;
+    background: var(--accent);
+    transform: skewX(0);
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative;
+    background: var(--primary);
+    color: var(--neutral);
+    padding: clamp(2rem, 6vw, 4rem) 0 clamp(3rem, 8vw, 5rem);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 85% 15%, rgba(245,166,35,0.18), transparent 55%),
+      radial-gradient(ellipse at 10% 90%, rgba(46,196,182,0.15), transparent 60%),
+      linear-gradient(160deg, var(--primary) 0%, var(--primary-deep) 100%);
+    z-index: -2;
+  }
+  .hero-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    opacity: 0.55;
+  }
+  .hero-card {
+    background: rgba(26,26,46,0.55);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(245,166,35,0.25);
+    border-radius: 4px;
+    padding: clamp(1.5rem, 5vw, 3rem);
+    position: relative;
+  }
+  .hero-card::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: -2px;
+    width: 60px; height: 60px;
+    border-top: 3px solid var(--secondary);
+    border-left: 3px solid var(--secondary);
+  }
+  .hero-card::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; right: -2px;
+    width: 60px; height: 60px;
+    border-bottom: 3px solid var(--accent);
+    border-right: 3px solid var(--accent);
+  }
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(46,196,182,0.15);
+    border: 1px solid rgba(46,196,182,0.35);
+    color: var(--accent);
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 6.4vw, 3.75rem);
+    color: var(--neutral);
+    text-wrap: balance;
+    margin-bottom: 0.75em;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--secondary);
+    position: relative;
+    white-space: nowrap;
+  }
+  .hero p.lead {
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    color: rgba(242,242,240,0.85);
+    max-width: 56ch;
+    margin-bottom: 1.75rem;
+  }
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .hero-meta {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed rgba(242,242,240,0.2);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .hero-meta div { display: flex; align-items: center; gap: 0.6rem; font-size: 0.92rem; }
+  .hero-meta i { color: var(--accent); }
+
+  @media (min-width: 1024px) {
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .hero-meta { grid-template-columns: repeat(2, 1fr); }
+    .hero-aside {
+      display: grid;
+      gap: 1rem;
+    }
+  }
+
+  .hero-side-card {
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 1.5rem;
+    border-radius: 4px;
+    transform: skewX(-6deg);
+    box-shadow: 6px 6px 0 var(--accent);
+    display: none;
+  }
+  .hero-side-card > * { transform: skewX(6deg); }
+  .hero-side-card .num {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .hero-side-card p { margin: 0.25rem 0 0; font-weight: 500; }
+  @media (min-width: 1024px) {
+    .hero-side-card { display: block; }
+  }
+
+  /* ============ SELLING POINTS ============ */
+  .selling { background: var(--neutral); }
+  .sp-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .sp-card {
+    background: var(--paper);
+    padding: 1.5rem;
+    border-radius: 4px;
+    border-left: 4px solid var(--accent);
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .sp-card:nth-child(2n) { border-left-color: var(--secondary); }
+  .sp-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(26,26,46,0.08); }
+  .sp-icon {
+    width: 48px; height: 48px;
+    background: var(--primary);
+    color: var(--secondary);
+    display: grid; place-items: center;
+    border-radius: 4px;
+    transform: skewX(-12deg);
+    margin-bottom: 1rem;
+  }
+  .sp-icon i { transform: skewX(12deg); font-size: 1.15rem; }
+  .sp-card:nth-child(2n) .sp-icon { color: var(--accent); }
+  .sp-card h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+  .sp-card p { margin: 0; color: rgba(26,26,46,0.78); font-size: 0.95rem; }
+
+  @media (min-width: 768px) {
+    .sp-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .sp-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* ============ SERVICES ============ */
+  .services { background: var(--primary); color: var(--neutral); position: relative; }
+  .services .eyebrow { color: var(--secondary); }
+  .services .eyebrow::before { background: var(--accent); }
+  .services h2 { color: var(--neutral); }
+  .services .section-head p { color: rgba(242,242,240,0.75); }
+
+  .svc-stack {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .svc-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(245,166,35,0.18);
+    border-radius: 4px;
+    padding: clamp(1.25rem, 3vw, 1.75rem);
+    position: relative;
+    overflow: hidden;
+  }
+  .svc-card::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 90px; height: 90px;
+    background:
+      linear-gradient(45deg, transparent 48%, var(--accent) 48%, var(--accent) 52%, transparent 52%),
+      linear-gradient(45deg, transparent 68%, var(--secondary) 68%, var(--secondary) 72%, transparent 72%);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  .svc-card h3 {
+    font-size: 1.25rem;
+    color: var(--neutral);
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+  .svc-card h3 i {
+    width: 40px; height: 40px;
+    background: var(--secondary);
+    color: var(--primary);
+    display: grid; place-items: center;
+    border-radius: 4px;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .svc-card:nth-child(3n+2) h3 i { background: var(--accent); color: var(--primary); }
+  .svc-card p { color: rgba(242,242,240,0.8); margin: 0; }
+
+  @media (min-width: 768px) {
+    .svc-stack {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .svc-card:first-child { grid-column: 1 / -1; }
+  }
+  @media (min-width: 1024px) {
+    .svc-stack { grid-template-columns: repeat(6, 1fr); }
+    .svc-card:nth-child(1) { grid-column: span 4; }
+    .svc-card:nth-child(2) { grid-column: span 2; }
+    .svc-card:nth-child(3) { grid-column: span 3; }
+    .svc-card:nth-child(4) { grid-column: span 3; }
+    .svc-card:nth-child(5) { grid-column: span 6; }
+  }
+
+  /* ============ ABOUT ============ */
+  .about { background: var(--neutral); }
+  .about-grid {
+    display: grid;
+    gap: 2rem;
+  }
+  .about-text p {
+    font-size: 1.05rem;
+    color: rgba(26,26,46,0.85);
+  }
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  .stat-card {
+    background: var(--primary);
+    color: var(--neutral);
+    padding: 1.25rem 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+  }
+  .stat-card:nth-child(2) { background: var(--secondary); color: var(--primary); }
+  .stat-card:nth-child(3) { background: var(--accent); color: var(--primary); }
+  .stat-card .num {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .stat-card .lbl {
+    font-size: 0.78rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    opacity: 0.9;
+  }
+  .about-visual {
+    background: var(--primary);
+    border-radius: 4px;
+    padding: 2rem;
+    color: var(--neutral);
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .about-visual svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.45;
+  }
+  .about-visual .badge {
+    position: relative;
+    z-index: 2;
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    align-self: flex-start;
+    margin-bottom: 0.75rem;
+    transform: skewX(-12deg);
+  }
+  .about-visual .badge span { display: inline-block; transform: skewX(12deg); }
+  .about-visual .quote {
+    position: relative; z-index: 2;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+    line-height: 1.3;
+    margin: 0;
+  }
+  .about-visual .quote i {
+    color: var(--secondary);
+    margin-right: 0.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .about-grid { grid-template-columns: 1.3fr 1fr; align-items: stretch; }
+  }
+
+  /* ============ PROCESS ============ */
+  .process { background: var(--paper); }
+  .proc-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  .proc-card {
+    background: var(--neutral);
+    border-radius: 4px;
+    padding: 1.5rem;
+    position: relative;
+    border-top: 4px solid var(--primary);
+    overflow: hidden;
+  }
+  .proc-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary) 30%, var(--secondary) 30%, var(--secondary) 70%, var(--accent) 70%);
+  }
+  .proc-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px; height: 56px;
+    background: var(--primary);
+    color: var(--secondary);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    transform: skewX(-15deg);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  .proc-num span { transform: skewX(15deg); }
+  .proc-card h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+  .proc-card p { margin: 0; font-size: 0.95rem; color: rgba(26,26,46,0.78); }
+
+  @media (min-width: 768px) {
+    .proc-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .proc-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* ============ TESTIMONIALS ============ */
+  .testimonials { background: var(--secondary); position: relative; overflow: hidden; }
+  .testimonials::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(135deg, transparent 0, transparent 60px, rgba(26,26,46,0.05) 60px, rgba(26,26,46,0.05) 62px);
+    pointer-events: none;
+  }
+  .testimonials .section-head { position: relative; }
+  .test-grid {
+    display: grid;
+    gap: 1.25rem;
+    position: relative;
+  }
+  .test-card {
+    background: var(--primary);
+    color: var(--neutral);
+    padding: 1.75rem;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 6px 6px 0 rgba(26,26,46,0.85);
+  }
+  .test-card:nth-child(2) {
+    background: var(--neutral);
+    color: var(--primary);
+    box-shadow: 6px 6px 0 var(--accent);
+  }
+  .test-card:nth-child(3) {
+    background: var(--accent);
+    color: var(--primary);
+    box-shadow: 6px 6px 0 var(--primary);
+  }
+  .test-stars { color: var(--secondary); margin-bottom: 0.75rem; letter-spacing: 0.1em; }
+  .test-card:nth-child(2) .test-stars { color: var(--secondary); }
+  .test-card:nth-child(3) .test-stars { color: var(--primary); }
+  .test-quote {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.02rem;
+    line-height: 1.5;
+    margin: 0 0 1.25rem;
+  }
+  .test-author {
+    display: flex; align-items: center; gap: 0.75rem;
+    font-weight: 700;
+    border-top: 1px solid currentColor;
+    padding-top: 1rem;
+    opacity: 0.95;
+  }
+  .test-author i {
+    width: 36px; height: 36px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: 768px) {
+    .test-grid { grid-template-columns: repeat(2, 1fr); }
+    .test-card:nth-child(3) { grid-column: 1 / -1; }
+  }
+  @media (min-width: 1024px) {
+    .test-grid { grid-template-columns: repeat(3, 1fr); }
+    .test-card:nth-child(3) { grid-column: auto; }
+    .test-card:nth-child(2) { transform: translateY(1.5rem); }
+  }
+
+  /* ============ FAQ ============ */
+  .faq { background: var(--neutral); }
+  .faq-list {
+    display: grid;
+    gap: 0.75rem;
+    max-width: 880px;
+  }
+  .faq-item {
+    background: var(--paper);
+    border-radius: 4px;
+    border-left: 4px solid var(--secondary);
+    overflow: hidden;
+  }
+  .faq-item:nth-child(2n) { border-left-color: var(--accent); }
+  .faq-q {
+    width: 100%;
+    min-height: 56px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--primary);
+    text-align: left;
+    line-height: 1.3;
+  }
+  .faq-q:hover, .faq-q:focus-visible {
+    background: rgba(245,166,35,0.08);
+    outline: none;
+  }
+  .faq-icon {
+    width: 32px; height: 32px;
+    background: var(--primary);
+    color: var(--secondary);
+    display: grid; place-items: center;
+    border-radius: 4px;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+  }
+  .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(45deg); background: var(--accent); color: var(--primary); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .faq-a-inner {
+    padding: 0 1.25rem 1.25rem;
+    color: rgba(26,26,46,0.82);
+  }
+  .faq-q[aria-expanded="true"] + .faq-a { max-height: 500px; }
+
+  /* ============ HOURS / LOCATION ============ */
+  .hours { background: var(--paper); }
+  .hl-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .hours-card {
+    background: var(--primary);
+    color: var(--neutral);
+    border-radius: 4px;
+    padding: 1.75rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hours-card::before {
+    content: '';
+    position: absolute;
+    top: -20px; right: -20px;
+    width: 120px; height: 120px;
+    background: linear-gradient(45deg, transparent 48%, var(--secondary) 48%, var(--secondary) 52%, transparent 52%);
+    opacity: 0.4;
+  }
+  .hours-card h3 {
+    color: var(--neutral);
+    font-size: 1.4rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .hours-card h3 i { color: var(--secondary); }
+  .hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: grid;
+    gap: 0.4rem;
+  }
+  .hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    border-bottom: 1px dashed rgba(242,242,240,0.18);
+    font-size: 0.95rem;
+  }
+  .hours-list li:last-child { border-bottom: none; }
+  .hours-list .day { font-weight: 600; }
+  .hours-list .time { color: var(--accent); font-weight: 600; }
+  .address-line {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(242,242,240,0.18);
+    display: flex; align-items: flex-start; gap: 0.6rem;
+    font-size: 0.95rem;
+  }
+  .address-line i { color: var(--secondary); margin-top: 0.2rem; }
+
+  .map-card {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 4px solid var(--primary);
+    background: var(--neutral);
+  }
+  .map-aspect {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+  .map-aspect iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  @media (min-width: 1024px) {
+    .hl-grid { grid-template-columns: 1fr 1.2fr; align-items: stretch; }
+    .map-aspect { aspect-ratio: 16 / 11; height: 100%; }
+  }
+
+  /* ============ CONTACT ============ */
+  .contact {
+    background: var(--primary);
+    color: var(--neutral);
+    position: relative;
+    overflow: hidden;
+  }
+  .contact::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(46,196,182,0.15), transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(245,166,35,0.15), transparent 40%);
+  }
+  .contact-grid {
+    position: relative;
+    display: grid;
+    gap: 1.5rem;
+  }
+  .contact h2 { color: var(--neutral); }
+  .contact .section-head p { color: rgba(242,242,240,0.78); }
+
+  .contact-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(245,166,35,0.25);
+    border-radius: 4px;
+    padding: 1.75rem;
+  }
+  .call-card {
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 2rem 1.75rem;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .call-card::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; right: -30px;
+    width: 140px; height: 140px;
+    background:
+      linear-gradient(45deg, transparent 48%, var(--accent) 48%, var(--accent) 52%, transparent 52%),
+      linear-gradient(135deg, transparent 48%, var(--primary) 48%, var(--primary) 52%, transparent 52%);
+    opacity: 0.5;
+  }
+  .call-card .label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .call-card a.phone {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    color: var(--primary);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    line-height: 1.1;
+    position: relative;
+    z-index: 2;
+  }
+  .call-card a.phone:hover, .call-card a.phone:focus-visible {
+    text-decoration: underline;
+    outline: none;
+  }
+  .call-card p { margin: 0.75rem 0 0; font-weight: 500; position: relative; z-index: 2; }
+
+  .form-row { display: grid; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .form-row label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--secondary);
+  }
+  .form-row input, .form-row textarea, .form-row select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    color: var(--neutral);
+    font-family: inherit;
+    font-size: 1rem;
+    min-height: 48px;
+  }
+  .form-row textarea { min-height: 110px; resize: vertical; }
+  .form-row input:focus, .form-row textarea:focus, .form-row select:focus {
+    outline: 2px solid var(--accent);
+    border-color: var(--accent);
+  }
+  .contact-info-list {
+    list-style: none;
+    padding: 0; margin: 0;
+    display: grid;
+    gap: 0.85rem;
+  }
+  .contact-info-list li {
+    display: flex; gap: 0.85rem; align-items: flex-start;
+    font-size: 0.95rem;
+  }
+  .contact-info-list i {
+    width: 36px; height: 36px;
+    display: grid; place-items: center;
+    background: var(--accent);
+    color: var(--primary);
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .contact-info-list a { color: var(--neutral); text-decoration: none; }
+  .contact-info-list a:hover { color: var(--secondary); }
+
+  @media (min-width: 1024px) {
+    .contact-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--primary-deep);
+    color: rgba(242,242,240,0.7);
+    padding: 2rem 0 1.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  footer .brand { justify-content: center; margin-bottom: 0.75rem; }
+  footer p { margin: 0.25rem 0; }
+  footer a { color: var(--secondary); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  /* skip link */
+  .skip {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    z-index: 200;
+  }
+  .skip:focus { left: 1rem; top: 1rem; }
+
+  /* prevent body scroll when menu open */
+  body.menu-open { overflow: hidden; }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip">Skip to content</a>
+
+<header class="nav" role="banner">
+  <div class="wrap nav-inner">
+    <a href="#hero" class="brand" aria-label="Voltio Electrical home">
+      <span class="brand-mark"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span>
+      <span>Voltio<em>.</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:0431718967" class="nav-cta"><i class="fa-solid fa-phone" aria-hidden="true"></i> 0431 718 967</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="#services"><i class="fa-solid fa-list-check" aria-hidden="true"></i> Services</a>
+    <a href="#about"><i class="fa-solid fa-user" aria-hidden="true"></i> About Juan</a>
+    <a href="#process"><i class="fa-solid fa-route" aria-hidden="true"></i> Process</a>
+    <a href="#faq"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> FAQ</a>
+    <a href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>
+    <a href="tel:0431718967" class="menu-cta"><i class="fa-solid fa-phone" aria-hidden="true"></i> Ring Juan: 0431 718 967</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <svg class="hero-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <pattern id="circuitGrid" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+        <path d="M0 60 L60 60 L60 0" stroke="#2EC4B6" stroke-width="0.6" fill="none" opacity="0.4"/>
+        <path d="M120 60 L60 60 L60 120" stroke="#F5A623" stroke-width="0.6" fill="none" opacity="0.35"/>
+        <circle cx="60" cy="60" r="2" fill="#F5A623" opacity="0.6"/>
+      </pattern>
+    </defs>
+    <rect width="1200" height="800" fill="url(#circuitGrid)"/>
+    <!-- intersecting parallelogram trace lines -->
+    <g stroke="#2EC4B6" stroke-width="1.2" fill="none" opacity="0.55">
+      <path d="M-50 200 L500 100 L520 130 L-30 230 Z"/>
+      <path d="M700 700 L1250 600 L1270 630 L720 730 Z"/>
+      <path d="M900 50 L1200 200 L1180 230 L880 80 Z"/>
+    </g>
+    <g stroke="#F5A623" stroke-width="1.4" fill="none" opacity="0.6">
+      <path d="M0 500 L350 350 L370 380 L20 530 Z"/>
+      <path d="M450 750 L800 650 L820 680 L470 780 Z"/>
+    </g>
+    <g fill="#F5A623" opacity="0.8">
+      <circle cx="500" cy="100" r="4"/>
+      <circle cx="350" cy="350" r="4"/>
+      <circle cx="900" cy="50" r="4"/>
+      <circle cx="1200" cy="600" r="4"/>
+    </g>
+    <g fill="#2EC4B6" opacity="0.8">
+      <circle cx="20" cy="530" r="3"/>
+      <circle cx="800" cy="650" r="3"/>
+    </g>
+  </svg>
+
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-card">
+        <span class="hero-tag"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Warranwood-based, eastern suburbs</span>
+        <h1>Downlights, pendants and switch upgrades <em>done properly</em></h1>
+        <p class="lead">Juan runs Voltio Electrical out of Warranwood and handles every job himself. Whether you're rewiring the lounge or finally swapping those tired old switches, you'll deal with the same sparky from the first call to the last test.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contact"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Get a quote</a>
+          <a class="btn btn-ghost" href="tel:0431718967"><i class="fa-solid fa-phone" aria-hidden="true"></i> Ring Juan now</a>
+        </div>
+        <div class="hero-meta">
+          <div><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Licensed &amp; insured</div>
+          <div><i class="fa-solid fa-clock" aria-hidden="true"></i> 24/7 availability</div>
+          <div><i class="fa-solid fa-certificate" aria-hidden="true"></i> Compliance lodged</div>
+          <div><i class="fa-solid fa-broom" aria-hidden="true"></i> Cleans up after</div>
+        </div>
+      </div>
+      <aside class="hero-aside" aria-label="Quick facts">
+        <div class="hero-side-card">
+          <p class="num">One sparky.</p>
+          <p>Quote to clean-up — Juan does the lot.</p>
+        </div>
+        <div class="hero-side-card" style="background: var(--accent); box-shadow: 6px 6px 0 var(--secondary);">
+          <p class="num">9am Tuesday</p>
+          <p>means 9am Tuesday. Reviewers keep mentioning it.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="motif-line" aria-hidden="true"></div>
+
+<!-- ============ SELLING POINTS ============ -->
+<section class="selling" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why Voltio</span>
+      <h2>Old-school standards, no fuss</h2>
+      <div class="underline" aria-hidden="true"></div>
+    </div>
+    <div class="sp-grid">
+      <article class="sp-card">
+        <div class="sp-icon"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
+        <h3>One sparky, whole job</h3>
+        <p>Juan handles your job from quote to clean-up, so nothing gets lost between trades. You're not chasing a subbie to come back and finish off.</p>
+      </article>
+      <article class="sp-card">
+        <div class="sp-icon"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></div>
+        <h3>Change your mind? No worries</h3>
+        <p>Lighting decisions are hard to picture until the holes are marked out. Customers have told us they changed their minds several times and we just rolled with it.</p>
+      </article>
+      <article class="sp-card">
+        <div class="sp-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></div>
+        <h3>On time, every time</h3>
+        <p>If we say 9am Tuesday, we're there 9am Tuesday. Reviewers keep mentioning it because apparently it's still rare.</p>
+      </article>
+      <article class="sp-card">
+        <div class="sp-icon"><i class="fa-solid fa-broom" aria-hidden="true"></i></div>
+        <h3>Clean site at the end</h3>
+        <p>Drop sheets down, dust vacuumed, offcuts taken away. You shouldn't have to clean up after the sparky's gone home.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What Juan does</span>
+      <h2>Lighting and small electrical, done with care</h2>
+      <div class="underline" aria-hidden="true"></div>
+      <p>Most of our work is lighting upgrades for homeowners mid-renovation, but the small repair jobs and safety checks are just as welcome.</p>
+    </div>
+    <div class="svc-stack">
+      <article class="svc-card">
+        <h3><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Downlight installation</h3>
+        <p>Replacing tired old fittings or planning a fresh layout for a renovated room. We'll walk through spacing and switching with you before a single hole gets cut, so the finish matches what you actually pictured.</p>
+      </article>
+      <article class="svc-card">
+        <h3><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Pendant lighting</h3>
+        <p>Feature pendants over kitchen islands, dining tables and stairwells, including the back-and-forth where you change your mind about the drop height. Like one of our customers put it, we're happy to make your ideas work even when those ideas keep shifting.</p>
+      </article>
+      <article class="svc-card">
+        <h3><i class="fa-solid fa-plug" aria-hidden="true"></i> Switch &amp; powerpoint upgrades</h3>
+        <p>Swapping out yellowed switches, adding USB powerpoints, or tidying up that mess of double adaptors behind the telly. Neat work, matching plates, no painted-over screws left behind.</p>
+      </article>
+      <article class="svc-card">
+        <h3><i class="fa-solid fa-bolt" aria-hidden="true"></i> Exhaust fans &amp; heated globes</h3>
+        <p>Bathroom three-in-ones, ducted exhausts and heated globe replacements done to current Australian Standards. Good for foggy mirrors, mouldy ceilings and cold winter showers.</p>
+      </article>
+      <article class="svc-card">
+        <h3><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Safety checks &amp; small repairs</h3>
+        <p>Tripping circuits, dodgy fittings, RCDs that need updating — the small stuff that's been bugging you for months. We'll diagnose it, explain what's going on in plain English, and sort it on the spot where we can.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">About</span>
+      <h2>The bloke behind the toolbag</h2>
+      <div class="underline" aria-hidden="true"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Voltio Electrical is a one-man show run by Juan, working through Warranwood and the eastern suburbs. Most of our work is lighting — downlights, pendants, exhaust fans, heated globes, switch upgrades — for homeowners mid-renovation who actually want to talk through what they're picturing.</p>
+        <p>People often change their minds two or three times about where a pendant should hang, and that's genuinely fine by us; better to get it right than rush it. We turn up when we say we will, sweep up before we leave, and you've got our number for next time.</p>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="num">5★</div>
+            <div class="lbl">Across every review</div>
+          </div>
+          <div class="stat-card">
+            <div class="num">100%</div>
+            <div class="lbl">Jobs done by Juan</div>
+          </div>
+          <div class="stat-card">
+            <div class="num">1</div>
+            <div class="lbl">Sparky, start to finish</div>
+          </div>
+        </div>
+      </div>
+      <aside class="about-visual" aria-hidden="false">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g stroke="#F5A623" stroke-width="1.5" fill="none">
+            <path d="M0 100 L150 60 L160 80 L10 120 Z"/>
+            <path d="M250 200 L400 160 L410 180 L260 220 Z"/>
+            <path d="M50 320 L200 280 L210 300 L60 340 Z"/>
+          </g>
+          <g stroke="#2EC4B6" stroke-width="1.5" fill="none">
+            <path d="M180 0 L320 80 L310 100 L170 20 Z"/>
+            <path d="M0 240 L120 320 L110 340 L-10 260 Z"/>
+          </g>
+          <circle cx="150" cy="60" r="4" fill="#F5A623"/>
+          <circle cx="320" cy="80" r="4" fill="#2EC4B6"/>
+          <circle cx="200" cy="280" r="4" fill="#F5A623"/>
+        </svg>
+        <span class="badge"><span>Warranwood VIC</span></span>
+        <p class="quote"><i class="fa-solid fa-quote-left" aria-hidden="true"></i>Better to get it right than rush it.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="motif-line" aria-hidden="true"></div>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Four steps, no surprises</h2>
+      <div class="underline" aria-hidden="true"></div>
+    </div>
+    <div class="proc-grid">
+      <article class="proc-card">
+        <div class="proc-num"><span>1</span></div>
+        <h3>Give us a bell</h3>
+        <p>Ring or text Juan with what you're after — a few photos of the room help us price it accurately.</p>
+      </article>
+      <article class="proc-card">
+        <div class="proc-num"><span>2</span></div>
+        <h3>On-site walkthrough</h3>
+        <p>We come out, mark up where lights and switches will sit, and lock in a quote you can actually read.</p>
+      </article>
+      <article class="proc-card">
+        <div class="proc-num"><span>3</span></div>
+        <h3>The work itself</h3>
+        <p>Juan does the install on the agreed day, checks in if anything on site needs a quick decision, and tests every circuit before powering up.</p>
+      </article>
+      <article class="proc-card">
+        <div class="proc-num"><span>4</span></div>
+        <h3>Clean-up &amp; hand-over</h3>
+        <p>Site swept, rubbish gone, certificate of compliance emailed through — and you've got our number for whatever's next.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials" id="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" style="color: var(--primary);">Reviews</span>
+      <h2 style="color: var(--primary);">Word from around the neighbourhood</h2>
+      <div class="underline" aria-hidden="true"></div>
+    </div>
+    <div class="test-grid">
+      <article class="test-card">
+        <div class="test-stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <p class="test-quote">"Juan was fantastic and did a great job installing downlights, upgrading switches and installing pendant light. Highly professional and lovely guy. Would definitely recommend!"</p>
+        <div class="test-author"><i class="fa-solid fa-user" aria-hidden="true"></i> Ashwin Rajan</div>
+      </article>
+      <article class="test-card">
+        <div class="test-stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <p class="test-quote">"Juan did a great job on our house, did the entire job and was great to work with. We changed our minds about lighting several times but Juan was happy to make our ideas work."</p>
+        <div class="test-author"><i class="fa-solid fa-user" aria-hidden="true"></i> Saskia Bryant</div>
+      </article>
+      <article class="test-card">
+        <div class="test-stars" aria-label="5 out of 5 stars">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+        </div>
+        <p class="test-quote">"Professional, friendly bloke Juan fixed issues on the exhaust fan and heated globe system installation. Was on time, did the whole job with a smile. Cleaned up after all the work and did not leave any."</p>
+        <div class="test-author"><i class="fa-solid fa-user" aria-hidden="true"></i> Dattha Moudgalya</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Common questions</span>
+      <h2>Things people ask before booking</h2>
+      <div class="underline" aria-hidden="true"></div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-1" id="faq-q1">
+          <span>Do you cover Warranwood and the surrounding eastern suburbs?</span>
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq-1" role="region" aria-labelledby="faq-q1">
+          <div class="faq-a-inner"><p>Yep, Warranwood is home base, and we regularly work through Croydon, Ringwood, Park Orchards, Wonga Park and around the Maroondah area. If you're a bit further out, give us a call and we'll let you know honestly whether it's worth us coming.</p></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-2" id="faq-q2">
+          <span>Can I change my mind about lighting once you've started?</span>
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq-2" role="region" aria-labelledby="faq-q2">
+          <div class="faq-a-inner"><p>Honestly, most people do. Once the holes are marked or the first downlight is in, it's normal to want to shift things around. We'd rather you say something than live with it for ten years, so just tell us and we'll work it out.</p></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-3" id="faq-q3">
+          <span>Will I get a certificate of electrical safety?</span>
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq-3" role="region" aria-labelledby="faq-q3">
+          <div class="faq-a-inner"><p>Yes — every job that needs one gets a Certificate of Electrical Safety lodged and emailed to you. It's important for your insurance and any future sale of the property, and it's not something we ever skip.</p></div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-4" id="faq-q4">
+          <span>Do you do the whole job yourself or send someone else?</span>
+          <span class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a" id="faq-4" role="region" aria-labelledby="faq-q4">
+          <div class="faq-a-inner"><p>Juan does the lot. You're not getting a quote from one person and a stranger turning up in the ute the next morning. Same sparky, start to finish.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOURS / LOCATION ============ -->
+<section class="hours" id="hours-location">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Hours &amp; location</span>
+      <h2>Round the clock, out of Warranwood</h2>
+      <div class="underline" aria-hidden="true"></div>
+    </div>
+    <div class="hl-grid">
+      <div class="hours-card">
+        <h3><i class="fa-solid fa-clock" aria-hidden="true"></i> Trading hours</h3>
+        <ul class="hours-list">
+          <li><span class="day">Monday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Tuesday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Wednesday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Thursday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Friday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Saturday</span><span class="time">Open 24 hours</span></li>
+          <li><span class="day">Sunday</span><span class="time">Open 24 hours</span></li>
+        </ul>
+        <div class="address-line">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>9 Highfield Ave, Warranwood VIC 3134, Australia</span>
+        </div>
+      </div>
+      <div class="map-card">
+        <div class="map-aspect">
+          <iframe
+            title="Map showing Voltio Electrical at 9 Highfield Ave Warranwood"
+            src="https://www.google.com/maps?q=9%20Highfield%20Ave%20Warranwood%20VIC%203134&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Tell Juan what you're after</h2>
+      <div class="underline" aria-hidden="true"></div>
+      <p>A short message and a couple of photos is plenty to get an honest price back.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="call-card">
+          <div class="label">Talk to Juan direct</div>
+          <a class="phone" href="tel:0431718967"><i class="fa-solid fa-phone" aria-hidden="true"></i> 0431 718 967</a>
+          <p>Open 24 hours — text if you can't talk.</p>
+        </div>
+        <div class="contact-card" style="margin-top: 1.25rem;">
+          <ul class="contact-info-list">
+            <li>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <div><strong>Workshop &amp; base</strong><br>9 Highfield Ave, Warranwood VIC 3134</div>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <div><strong>Email</strong><br><a href="mailto:juan@voltioelectrical.com.au">juan@voltioelectrical.com.au</a></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-map" aria-hidden="true"></i>
+              <div><strong>Service area</strong><br>Warranwood, Croydon, Ringwood, Park Orchards, Wonga Park &amp; around Maroondah</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <form class="contact-card" id="quote-form" novalidate>
+        <h3 style="color: var(--secondary); margin-bottom: 1rem;">Quote request</h3>
+        <div class="form-row">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="form-row">
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+        <div class="form-row">
+          <label for="f-job">What's the job?</label>
+          <select id="f-job" name="job">
+            <option>Downlight installation</option>
+            <option>Pendant lighting</option>
+            <option>Switch &amp; powerpoint upgrades</option>
+            <option>Exhaust fan / heated globes</option>
+            <option>Safety check / small repair</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="f-msg">Tell Juan a bit more</label>
+          <textarea id="f-msg" name="message" placeholder="Rooms involved, rough timing, anything you've already pictured..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send to Juan
+        </button>
+        <p style="font-size: 0.82rem; margin: 0.85rem 0 0; color: rgba(242,242,240,0.65);">
+          This opens your email app — no data is stored here.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#hero" class="brand" aria-label="Voltio Electrical">
+      <span class="brand-mark"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span>
+      <span>Voltio<em style="color: var(--secondary); font-style: normal;">.</em> Electrical</span>
+    </a>
+    <p>9 Highfield Ave, Warranwood VIC 3134 · <a href="tel:0431718967">0431 718 967</a></p>
+    <p>Licensed Victorian electrical contractor. Servicing the eastern suburbs of Melbourne.</p>
+    <p style="margin-top: 1rem; font-size: 0.82rem;">© 2026 Voltio Electrical. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  // ===== Mobile menu =====
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobile-menu');
+  const menuLinks = menu.querySelectorAll('a');
+  let lastFocus = null;
+
+  function openMenu() {
+    menu.classList.add('open');
+    menu.setAttribute('aria-hidden', 'false');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', 'Close menu');
+    document.body.classList.add('menu-open');
+    lastFocus = document.activeElement;
+    setTimeout(() => menuLinks[0] && menuLinks[0].focus(), 80);
+  }
+  function closeMenu() {
+    menu.classList.remove('open');
+    menu.setAttribute('aria-hidden', 'true');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Open menu');
+    document.body.classList.remove('menu-open');
+    if (lastFocus) lastFocus.focus();
+  }
+  hamburger.addEventListener('click', () => {
+    if (menu.classList.contains('open')) closeMenu(); else openMenu();
+  });
+  menuLinks.forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
+    // focus trap
+    if (e.key === 'Tab' && menu.classList.contains('open')) {
+      const focusables = [hamburger, ...menuLinks];
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
+    }
+  });
+
+  // ===== FAQ accordion =====
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+    });
+  });
+
+  // ===== Mailto form =====
+  const form = document.getElementById('quote-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = (document.getElementById('f-name').value || '').trim();
+      const phone = (document.getElementById('f-phone').value || '').trim();
+      const job = document.getElementById('f-job').value;
+      const msg = (document.getElementById('f-msg').value || '').trim();
+      const subject = encodeURIComponent('Quote request — ' + (job || 'Voltio Electrical'));
+      const body = encodeURIComponent(
+        'Hi Juan,\n\n' +
+        'Name: ' + name + '\n' +
+        'Phone: ' + phone + '\n' +
+        'Job: ' + job + '\n\n' +
+        'Details:\n' + msg + '\n'
+      );
+      window.location.href = 'mailto:juan@voltioelectrical.com.au?subject=' + subject + '&body=' + body;
+    });
+  }
+})();
+</script>
+</body>
+</html>
